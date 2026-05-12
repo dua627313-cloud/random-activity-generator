@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Activity for you</title>
+</head>
+<body>
+    <form action="/" method="Post" id="form-full" class="form-full">
+        <select name="type" class="form">
+         <option value="" data-display="random">Random activity</option>
+         <option value="education">Education</option>
+         <option value="recreational">Recreational</option>
+         <option value="social">Social</option>
+         <option value="charity">Charity</option>
+         <option value="cooking">Cooking</option>
+         <option value="relaxation">Relaxation</option>
+         <option value="busywork">Busywork</option>
+        </select>
+        <select name="participants" class="form">
+         <option value="" data-display="random">Random Participants</option>
+         <option value="1">1</option>
+         <option value="2">2</option>
+         <option value="3">3</option>
+         <option value="4">4</option>
+         <option value="5">5</option>
+         <option value="6">6</option>
+         <option value="8">8</option>
+        </select>
+        <button type="submit" class="submit">Go</button>
+    </form>
+    <card>
+    <% if(locals.data){ %>
+        <h2 class="activity">
+            <%= data.activity %>
+        </h2>
+        <span class="cardType">
+            <%= data.type%>
+        </span>
+        <span class="cardParticipants">
+            <%= data.participants%>
+        </span>
+         <% } %>
+     <% if(locals.error){ %>
+        <div id="tag-error" class="tag-error">
+       <%=error%>
+       </div>
+        <% } %>
+    </card>
+</body>
+</html>

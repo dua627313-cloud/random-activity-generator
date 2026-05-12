@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #f093fb 50%, #f5576c 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,.18);
+}
+
+#form-full.form-full {
+  background: #fff;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,.15);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+select.form {
+  width: 100%;
+  appearance: none;
+  padding: .75rem 1.1rem;
+  border-radius: 14px;
+  border: 2.5px solid #e0d7f9;
+  font-size: .97rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  color: #3d2c8d;
+  background: #f5f0ff;
+  cursor: pointer;
+  outline: none;
+  transition: border .2s, background .2s;
+}
+select.form:focus { border-color: #7c3aed; background: #ede9fe; }
+
+.submit {
+  width: 100%;
+  padding: .9rem;
+  border: none;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(90deg, #7c3aed, #f093fb);
+  color: #fff;
+  cursor: pointer;
+  transition: transform .15s, box-shadow .15s;
+  box-shadow: 0 4px 18px rgba(124,58,237,.35);
+}
+.submit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(124,58,237,.45); }
+.submit:active { transform: scale(.98); }
+
+card {
+  display: block;
+  max-width: 520px;
+  margin: 1.5rem auto 0;
+  padding: 1.5rem 1.6rem;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #f5f0ff 0%, #fce4ec 100%);
+  border: 2px solid #e0d7f9;
+  animation: popin .35s cubic-bezier(.4,0,.2,1);
+}
+@keyframes popin {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.activity {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #3d2c8d;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.cardType {
+  display: inline-block;
+  padding: .38rem .85rem;
+  border-radius: 999px;
+  background: #ede9fe;
+  color: #5b21b6;
+  font-size: .82rem;
+  font-weight: 700;
+  margin-right: .5rem;
+}
+
+.cardParticipants {
+  display: inline-block;
+  padding: .38rem .85rem;
+  border-radius: 999px;
+  background: #fce4ec;
+  color: #9d174d;
+  font-size: .82rem;
+  font-weight: 700;
+}
+
+#tag-error.tag-error {
+  background: #fff1f2;
+  border: 2px solid #fecdd3;
+  color: #9f1239;
+  font-weight: 700;
+  font-size: .97rem;
+  padding: 1.2rem 1.4rem;
+  border-radius: 18px;
+}
